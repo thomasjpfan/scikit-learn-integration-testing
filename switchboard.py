@@ -49,7 +49,7 @@ class ImbalanceLearnTests(GitTarget):
 
     @property
     def conda_dependencies(self):
-        return []
+        return ["pytest"]
 
 
 if __name__ == "__main__":
