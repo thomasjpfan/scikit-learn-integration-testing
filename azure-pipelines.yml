@@ -7,13 +7,11 @@ schedules:
     always: true
 
 jobs:
-  - job: test
-    display: Run tests
+  - job: Test
     strategy:
       matrix:
         imbalanced-learn:
-          parameters:
-            TARGET: imbalanced-learn
+          TARGET: imbalanced-learn
     pool:
       vmImage: ubuntu-18.04
     steps:
