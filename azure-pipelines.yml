@@ -6,18 +6,15 @@ schedules:
         - master
     always: true
 
-parameters:
-  - name: library
-    type: string
-    values:
-      - imbalanced-learn
-
 jobs:
-  - ${{ each library in parameters.library }}:
-      - job: ${{ library }}
-        displayName: ${{ library }}
-        pool:
-          vmImage: ubuntu-18.04
-        steps:
-          - bash: echo "hello world"
-            displayName: This is cool
+  - job: test
+    display: Run tests
+    strategy:
+      matrix:
+        imbalanced-learn:
+          target: imbalanced-learn
+    pool:
+      vmImage: ubuntu-18.04
+    steps:
+      - bash: echo "$TARGET"
+        displayName: Testing
