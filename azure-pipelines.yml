@@ -12,7 +12,8 @@ jobs:
     strategy:
       matrix:
         imbalanced-learn:
-          target: imbalanced-learn
+          parameters:
+            TARGET: imbalanced-learn
     pool:
       vmImage: ubuntu-18.04
     steps:
