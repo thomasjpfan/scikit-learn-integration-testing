@@ -12,8 +12,8 @@ jobs:
       matrix:
         imbalanced-learn:
           TARGET: imbalanced-learn
-        shap:
-          TARGET: shap
+        lime:
+          TARGET: lime
     pool:
       vmImage: ubuntu-18.04
     steps:

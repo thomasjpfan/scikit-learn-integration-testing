@@ -52,14 +52,14 @@ class ImbalanceLearnTests(GitTarget):
         return ["pytest"]
 
 
-class ShapTests(GitTarget):
+class LimeTests(GitTarget):
     @property
     def name(self):
-        return "shap"
+        return "lime"
 
     @property
     def clone_url(self):
-        return "https://github.com/slundberg/shap"
+        return "https://github.com/marcotcr/lime"
 
     @property
     def git_ref(self):
@@ -71,11 +71,11 @@ class ShapTests(GitTarget):
 
     @property
     def test_command(self):
-        return "python setup.py nosetests"
+        return "pytest lime"
 
     @property
     def conda_dependencies(self):
-        return ["nose"]
+        return ["pytest"]
 
 
 if __name__ == "__main__":
