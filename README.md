@@ -7,6 +7,7 @@ This repository tests the compatibility of scikit-learn with specific downstream
 ## Tested Projects
 
 - [imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn)
+- [shap](https://github.com/slundberg/shap)
 
 ## Adding a New Downstream Library
 
