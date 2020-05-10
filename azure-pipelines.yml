@@ -18,7 +18,7 @@ jobs:
       - task: UsePythonVersion@0
         inputs:
           versionSpec: "3.8"
-      - bash: pip install texasbbq
+      - bash: pip install git+https://github.com/numba/texasbbq.git
         displayName: Install dependencies
       - bash: python switchboard.py -t $TARGET
         displayName: Run tests
