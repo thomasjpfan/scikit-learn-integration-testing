@@ -13,7 +13,7 @@ parameters:
       - imbalanced-learn
 
 jobs:
-  - $ {{ each library in parameters.library }}:
+  - ${{ each library in parameters.library }}:
       - job: ${{ library }}
         displayName: ${{ library }}
         pool:
