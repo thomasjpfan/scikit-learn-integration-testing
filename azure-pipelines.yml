@@ -1,0 +1,23 @@
+schedules:
+  - cron: "30 2 * * *"
+    displayName: Run nightly build
+    branches:
+      include:
+        - master
+    always: true
+
+parameters:
+  - name: library
+    type: string
+    values:
+      - imbalanced-learn
+
+jobs:
+  - $ {{ each library in parameters.library }}:
+      - job: ${{ library }}
+        displayName: ${{ library }}
+        pool:
+          vmImage: ubuntu-18.04
+        steps:
+          - bash: echo "hello world"
+            displayName: This is cool
