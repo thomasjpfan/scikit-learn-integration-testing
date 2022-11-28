@@ -15,15 +15,14 @@ class ScikitLearnSource(GitSource):
 
     @property
     def git_ref(self):
-        return "master"
+        return "main"
 
     @property
     def install_command(self):
-        return "pip install -e ."
-
-    @property
-    def conda_dependencies(self):
-        return []
+        return (
+            "pip install --pre --extra-index "
+            "https://pypi.anaconda.org/scipy-wheels-nightly/simple scikit-learn"
+        )
 
 
 class ImbalanceLearnTests(GitTarget):
@@ -37,41 +36,15 @@ class ImbalanceLearnTests(GitTarget):
 
     @property
     def git_ref(self):
-        return "master"
+        return "main"
 
     @property
     def install_command(self):
-        return "pip install -e ."
+        return "pip install ."
 
     @property
     def test_command(self):
         return "pytest -v imblearn"
-
-    @property
-    def conda_dependencies(self):
-        return ["pytest"]
-
-
-class LimeTests(GitTarget):
-    @property
-    def name(self):
-        return "lime"
-
-    @property
-    def clone_url(self):
-        return "https://github.com/marcotcr/lime"
-
-    @property
-    def git_ref(self):
-        return "master"
-
-    @property
-    def install_command(self):
-        return "pip install -e ."
-
-    @property
-    def test_command(self):
-        return "pytest lime"
 
     @property
     def conda_dependencies(self):

@@ -7,7 +7,6 @@ This repository tests the compatibility of scikit-learn with specific downstream
 ## Tested Projects
 
 - [imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn)
-- [lime](https://github.com/marcotcr/lime)
 
 ## Adding a New Downstream Library
 
