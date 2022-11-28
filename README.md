@@ -1,6 +1,6 @@
 # Scikit-learn Integration Testing
 
-[![Build Status](https://dev.azure.com/thomasjpfan/scikit-learn/_apis/build/status/thomasjpfan.scikit-learn-integration-testing?branchName=master)](https://dev.azure.com/thomasjpfan/scikit-learn/_build/latest?definitionId=10&branchName=master)
+[![Build Status](https://dev.azure.com/thomasjpfan/scikit-learn/_apis/build/status/thomasjpfan.scikit-learn-integration-testing?branchName=main)](https://dev.azure.com/thomasjpfan/scikit-learn/_build/latest?definitionId=10&branchName=main)
 
 This repository tests the compatibility of scikit-learn with specific downstream libraries by using [TexasBBQ](https://github.com/numba/texasbbq).
 
