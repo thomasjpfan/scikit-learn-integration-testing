@@ -40,7 +40,7 @@ class ImbalanceLearnTests(GitTarget):
 
     @property
     def git_ref(self):
-        return "main"
+        return "master"
 
     @property
     def install_command(self):
