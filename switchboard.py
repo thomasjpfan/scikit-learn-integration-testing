@@ -18,6 +18,10 @@ class ScikitLearnSource(GitSource):
         return "main"
 
     @property
+    def conda_dependencies(self):
+        return ["-c conda-forge numpy scipy threadpoolctl joblib"]
+
+    @property
     def install_command(self):
         return (
             "pip install --pre --extra-index "
